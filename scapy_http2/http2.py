@@ -21,6 +21,9 @@ H2_ALPN_IDS = ["h2"]
 
 
 class ByteLenField(LenField):
+    
+    __slots__ = ["width", "size"]
+        
     def __init__(self, name, default=None, fmt="I", width=None):
         self.name = name
         self.width = width
